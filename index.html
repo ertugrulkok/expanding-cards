@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expanding cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card active" style="background-image:url(./images/ankara1.jpg)"><h3>Ankara</h3></div>
+        <div class="card" style="background-image:url(./images/berlin.jpg)"><h3>Berlin</h3></div>
+        <div class="card" style="background-image:url(./images/capetown.jpg)"><h3>Capetown</h3></div>
+        <div class="card" style="background-image:url(./images/rio.jpg)"><h3>Rio de Janerio</h3></div>
+        <div class="card" style="background-image:url(./images/sydney.jpg)"><h3>Sydney</h3></div>
+
+
+    </div>
+
+
+
+    <script>
+        const cards=document.querySelectorAll(".card")
+        
+        function removeActiveClass(){
+            cards.forEach((mahmut) => {
+                mahmut.classList.remove("active");
+            });
+        }
+
+        cards.forEach((mahmut) => {
+            mahmut.addEventListener('click', () => {
+                removeActiveClass();
+                mahmut.classList.add("active");
+            });
+        })
+
+
+
+ 
+
+
+
+
+        
+    </script>
+    
+</body>
+</html>
